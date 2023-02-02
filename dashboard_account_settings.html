@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  />
+</head>
+<body>
+  <nav class="py-3 px-5 lg:px-20">
+    <div class="flex flex-wrap items-center justify-between">
+      <div
+        class="items-center justify-between hidden w-full md:flex md:w-auto"
+        id="navbar-sticky"
+      >
+        <ul class="flex gap-5">
+          <li>
+            <a href="/index.html"> Home </a>
+          </li>
+          <li>
+            <a href="/index.html"> Product </a>
+          </li>
+          <li>
+            <a href="/pricing.html"> Pricing </a>
+          </li>
+          <li>
+            <a href="/faq.html"> FAQ </a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex justify-between items-center w-[100%] lg:w-[50%]">
+        <div>
+          <a href="http://"> LOGO </a>
+        </div>
+        <div>
+          <ul class="flex items-center gap-5">
+            <li>
+              <a href="/index.html"> My Account </a>
+            </li>
+            <li>
+              <a href="/login.html"> Logout </a>
+            </li>
+
+            <button
+              data-collapse-toggle="navbar-sticky"
+              type="button"
+              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <!-- MAIN -->
+    <div class="mx-5 md:mx-20 lg:mx-20 my-28">
+      <div class="grid grid-cols-12">
+        <!-- SIDEBAR -->
+        <div class="col-span-2 border-r-2 border-black">
+          <ul class="flex flex-col gap-2">
+            <li
+              class="border-t-2 border-l-2 border-black border-b-2 w-full bg-gray-100 pl-2"
+            >
+              <a href="/dashboard_welcome.html"> Home </a>
+            </li>
+            <li
+              class="border-t-2 border-l-2 border-black border-b-2 w-full bg-gray-100 pl-2"
+            >
+              <a href="/dashboard_account_settings.html"> Account Settings</a>
+            </li>
+            <li
+              class="border-t-2 border-l-2 border-black border-b-2 w-full bg-gray-100 pl-2"
+            >
+              <a href="/dashboard_brand_campaigns.html"> Brands/ Campaigns </a>
+            </li>
+            <li
+              class="border-t-2 border-l-2 border-black border-b-2 w-full bg-gray-100 pl-2"
+            >
+              <a href="/dashboard_credientials.html"> 1nce Credientials </a>
+            </li>
+            <li
+              class="border-t-2 border-l-2 border-black border-b-2 w-full bg-gray-100 pl-2"
+            >
+              <a href="/dashboard_numbers.html"> 10DLC Numbers</a>
+            </li>
+            <li
+              class="border-t-2 border-l-2 border-black border-b-2 w-full bg-gray-100 pl-2"
+            >
+              <a href="/dashboard_firewall.html">SMS Firewalling </a>
+            </li>
+            <li
+              class="border-t-2 border-l-2 border-black border-b-2 w-full bg-gray-100 pl-2"
+            >
+              <a href="/dashboard_sms_behaviour.html">SMS Behaviour </a>
+            </li>
+            <li
+              class="border-t-2 border-l-2 border-black border-b-2 w-full bg-gray-100 pl-2"
+            >
+              <a href="/dashboard_iccid_defaults.html"> ICCID Defaults </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- MAIN PAGE  -->
+        <div class="col-span-10 h-[60vh]">
+          <div class="h-[100%] px-20">
+            <form action="" method="post" class="grid grid-cols-2 gap-10">
+              <div>
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Legal company name:
+                  </label>
+                  <input
+                    type="text"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Text"
+                  />
+                </div>
+
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Nation/State of registration:
+                  </label>
+                  <input
+                    type="text"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Text"
+                  />
+                </div>
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md"> EIN: </label>
+                  <input
+                    type="text"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Text"
+                  />
+                </div>
+
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Admin contact name:
+                  </label>
+                  <input
+                    type="text"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Text"
+                  />
+                </div>
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Admin contact email:
+                  </label>
+                  <input
+                    type="text"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Text"
+                  />
+                </div>
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Admin contact phone:
+                  </label>
+                  <input
+                    type="text"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Text"
+                  />
+                </div>
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Admin contact address:
+                  </label>
+                  <input
+                    type="text"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Text"
+                  />
+                </div>
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Billing contact name:
+                  </label>
+                  <input
+                    type="text"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Text"
+                  />
+                </div>
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Billing contact email:
+                  </label>
+                  <input
+                    type="text"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Text"
+                  />
+                </div>
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Billing contact phone:
+                  </label>
+                  <input
+                    type="text"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Text"
+                  />
+                </div>
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Billing contact address:
+                  </label>
+                  <input
+                    type="text"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Text"
+                  />
+                </div>
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Password:
+                  </label>
+                  <input
+                    type="password"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Text"
+                  />
+                </div>
+                <button type="submit" class="border border-black px-2 py-1">Change Password</button>
+              </div>
+              <div class="my-5">
+                <p>Change Password</p>
+                <form action="" method="post">
+
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Old Password:
+                  </label>
+                  <input
+                    type="password"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Password"
+                  />
+                </div>
+
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md ">
+                    New Password:
+                  </label>
+                  <input
+                    type="password"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="my-2 md:gap-5 grid grid-cols-2">
+                  <label for="company_name" class="text-md">
+                    Confirm Password:
+                  </label>
+                  <input
+                    type="password"
+                    class="border-black border-2 rounded"
+                    name="company_name"
+                    id="company_name"
+                    placeholder="Password"
+                  />
+                </div>
+                <button type="submit" class="border border-black px-2 py-1">Change Password</button>
+                </form>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="mx-5 flex-col md:flex-row gap-5 items-center lg:mx-64 my-10 px-10 flex justify-between"
+    >
+      <div class="left-links flex gap-4">
+        <p class="text-md font-regular">Home</p>
+        <p class="text-md font-regular">Contact</p>
+        <p class="text-md font-regular">Legal</p>
+      </div>
+      <div class="right-links border-2 border-black flex gap-5 p-2">
+        <div class="border-2 border-black p-2 rounded">
+          <a href="http://"> <i class="fab fa-facebook-f"></i></a>
+        </div>
+
+        <div class="border-2 border-black p-2 rounded">
+          <a href="http://"> <i class="fab fa-twitter"></i></a>
+        </div>
+
+        <div class="border-2 border-black p-2 rounded">
+          <a href="http://"> <i class="fab fa-google"></i></a>
+        </div>
+
+        <div class="border-2 border-black p-2 rounded">
+          <a href="http://"> <i class="fa-regular fa-envelope"></i> </a>
+        </div>
+
+        <div class="border-2 border-black p-2 rounded">
+          <a href="http://"><i class="fa-regular fa-share-nodes"></i></a>
+        </div>
+
+        <div class="border-2 border-black p-2 rounded">
+          <a href="http://"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							clifford: "#da373d",
+						},
+					},
+				},
+			};
+		</script>
+
+		<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+		<style type="text/tailwindcss">
+			@layer utilities {
+				.content-auto {
+					content-visibility: auto;
+				}
+			}
+		</style>
+		<!-- ICONS LINK -->
+		<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+	  />
+	</head>
+	<body>
+	  <nav class="py-3 px-5 lg:px-20">
+		<div class="flex flex-wrap items-center justify-between">
+		  <div
+			class="items-center justify-between hidden w-full md:flex md:w-auto"
+			id="navbar-sticky"
+		  >
+			<ul class="flex gap-5">
+			  <li>
+				<a href="/index.html"> Home </a>
+			  </li>
+			  <li>
+				<a href="/index.html"> Product </a>
+			  </li>
+			  <li>
+				<a href="/pricing.html"> Pricing </a>
+			  </li>
+			  <li>
+				<a href="/faq.html"> FAQ </a>
+			  </li>
+			</ul>
+		  </div>
+		  <div class="flex justify-between items-center w-[100%] lg:w-[50%]">
+			<div>
+			  <a href="http://"> LOGO </a>
+			</div>
+			<div>
+			  <ul class="flex items-center gap-5">
+				<li>
+				  <a href="/index.html"> My Account </a>
+				</li>
+				<li>
+				  <a href="/login.html"> Logout </a>
+				</li>
+  
+				<button
+				  data-collapse-toggle="navbar-sticky"
+				  type="button"
+				  class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+				  aria-controls="navbar-sticky"
+				  aria-expanded="false"
+				>
+				  <span class="sr-only">Open main menu</span>
+				  <svg
+					class="w-6 h-6"
+					aria-hidden="true"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+				  >
+					<path
+					  fill-rule="evenodd"
+					  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+					  clip-rule="evenodd"
+					></path>
+				  </svg>
+				</button>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </nav>
+	<body>
+
+		<!--  MAIN -->
+		<div class="mx-64 my-28">
+			<div>
+				<div class="text-bold text-3xl">FAQ</div>
+				<p class="font-semibold text-md my-5">
+					Why is this the first question?
+				</p>
+				<p class="text-md text-regular mb-5">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+
+				<p class="font-semibold text-md my-5">
+					Why is this the second question?
+				</p>
+				<p class="text-md text-regular mb-5">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+
+				<p class="font-semibold text-md my-5">
+					Why is this the third question?
+				</p>
+				<p class="text-md text-regular mb-5">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+
+				<p class="font-semibold text-md my-5">
+					Why is this the fourth question?
+				</p>
+				<p class="text-md text-regular mb-5">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+		</div>
+		<footer
+      class="mx-5 flex-col md:flex-row gap-5 items-center lg:mx-64 my-10 px-10 flex justify-between"
+    >
+      <div class="left-links flex gap-4">
+        <p class="text-md font-regular">Home</p>
+        <p class="text-md font-regular">Contact</p>
+        <p class="text-md font-regular">Legal</p>
+      </div>
+      <div class="right-links border-2 border-black flex gap-5 p-2">
+        <div class="border-2 border-black p-2 rounded">
+          <a href="http://"> <i class="fab fa-facebook-f"></i></a>
+        </div>
+
+        <div class="border-2 border-black p-2 rounded">
+          <a href="http://"> <i class="fab fa-twitter"></i></a>
+        </div>
+
+        <div class="border-2 border-black p-2 rounded">
+          <a href="http://"> <i class="fab fa-google"></i></a>
+        </div>
+
+        <div class="border-2 border-black p-2 rounded">
+          <a href="http://"> <i class="fa-regular fa-envelope"></i> </a>
+        </div>
+
+        <div class="border-2 border-black p-2 rounded">
+          <a href="http://"><i class="fa-light fa-share-nodes"></i></a>
+        </div>
+
+        <div class="border-2 border-black p-2 rounded">
+          <a href="http://"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+      </div>
+    </footer>
+	</body>
+</html>
